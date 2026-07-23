@@ -1,0 +1,9 @@
+{
+  "name": "Pacific Northwest Itinerary 2026",
+  "short_name": "PNW Trip",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#173f3a",
+  "description": "A 10-day Pacific Northwest road trip itinerary."
+}
