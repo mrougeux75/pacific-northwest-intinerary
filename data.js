@@ -8,7 +8,7 @@ window.TRIP = {
       route: "124 miles · 2 hr 10 min to Olympic Lodge",
       events: [
         {time:"7:05 AM", type:"flight", title:"Fly SDF to Seattle", summary:"Delta flights DL 1610 and DL 774; scheduled arrival in Seattle at 12:08 PM.", details:["Keep both flight numbers handy for the connection."], map:"Seattle-Tacoma International Airport"},
-        {time:"12:08 PM", type:"car", title:"Pick up rental car", summary:"Avis premium crossover, prepaid.", details:["Confirmation: 20404814US3"], map:"Seattle-Tacoma International Airport Avis"},
+        {time:"12:08 PM", type:"car", title:"Pick up rental car", summary:"Avis premium crossover, prepaid.", map:"Seattle-Tacoma International Airport Avis"},
         {time:"After arrival", type:"drive", title:"Drive to Olympic Lodge", summary:"124 miles · 2 hr 10 min.", details:["Olympic Lodge, 140 S. Del Guzzi Drive, Port Angeles, WA","Phone: 360-452-2993","Check-in: 4:00 PM"], map:"Olympic Lodge by Ayres, 140 S Del Guzzi Dr, Port Angeles, WA"},
         {time:"4:00–8:30 PM", type:"view", title:"Hurricane Ridge", summary:"Late afternoon overlooks and an optional portion of Hurricane Hill Trail.", details:["Drive from Port Angeles: about 35–40 minutes","Main paved visitor-area lot; restrooms available","Hurricane Hill: up to 3.2 miles round trip; turn around anytime","Late-day timing may ease parking pressure","Elevation is 5,000+ feet; bring a light jacket","Take the National Park Pass"], map:"Hurricane Ridge Visitor Center"}
       ]
