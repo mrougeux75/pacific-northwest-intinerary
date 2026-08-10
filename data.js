@@ -1,143 +1,1124 @@
-window.TRIP = {
-  title: "Pacific Northwest",
-  dates: "August 16–25, 2026",
-  days: [
+/* Pacific Northwest itinerary — August 16–25, 2026
+ * Rebuilt exclusively from the 10 day-detail documents and master itinerary supplied by the user.
+ */
+window.TRIP_DATA = {
+  "tripTitle": "Pacific Northwest 2026",
+  "tripDates": "August 16–25, 2026",
+  "days": [
     {
-      day: 1, date: "Sunday, August 16", title: "Arrival & Hurricane Ridge",
-      subtitle: "Seattle → Port Angeles → Olympic National Park",
-      route: "124 miles · 2 hr 10 min to Olympic Lodge",
-      events: [
-        {time:"7:05 AM", type:"flight", title:"Fly SDF to Seattle", summary:"Delta flights DL 1610 and DL 774; scheduled arrival in Seattle at 12:08 PM.", details:["Keep both flight numbers handy for the connection."], map:"Seattle-Tacoma International Airport"},
-        {time:"12:08 PM", type:"car", title:"Pick up rental car", summary:"Avis premium crossover, prepaid.", map:"Seattle-Tacoma International Airport Avis"},
-        {time:"After arrival", type:"drive", title:"Drive to Olympic Lodge", summary:"124 miles · 2 hr 10 min.", details:["Olympic Lodge, 140 S. Del Guzzi Drive, Port Angeles, WA","Phone: 360-452-2993","Check-in: 4:00 PM"], map:"Olympic Lodge by Ayres, 140 S Del Guzzi Dr, Port Angeles, WA"},
-        {time:"4:00–8:30 PM", type:"view", title:"Hurricane Ridge", summary:"Late afternoon overlooks and an optional portion of Hurricane Hill Trail.", details:["Drive from Port Angeles: about 35–40 minutes","Main paved visitor-area lot; restrooms available","Hurricane Hill: up to 3.2 miles round trip; turn around anytime","Late-day timing may ease parking pressure","Elevation is 5,000+ feet; bring a light jacket","Take the National Park Pass"], map:"Hurricane Ridge Visitor Center"}
+      "day": 1,
+      "date": "Sunday, August 16, 2026",
+      "title": "Seattle Arrival & Hurricane Ridge",
+      "subtitle": "Seattle → Port Angeles → Hurricane Ridge",
+      "dontForget": [
+        "National Park Pass",
+        "Light jacket for Hurricane Ridge",
+        "Drinks and snacks"
+      ],
+      "storyTitle": "Documented plan",
+      "story": "Arrive in Seattle, drive to Olympic Lodge, then visit Hurricane Ridge. The document also gives an alternate plan of driving directly from the airport to Hurricane Ridge.",
+      "events": [
+        {
+          "time": "7:05 AM",
+          "end": "",
+          "title": "Depart Louisville (SDF)",
+          "type": "flight",
+          "details": "Delta DL 1610; connect to DL 774.",
+          "location": "Louisville Muhammad Ali International Airport",
+          "map": "https://www.google.com/maps/search/?api=1&query=Louisville%20Muhammad%20Ali%20International%20Airport"
+        },
+        {
+          "time": "12:08 PM",
+          "end": "",
+          "title": "Arrive Seattle",
+          "type": "flight",
+          "details": "Arrival time listed in the master itinerary.",
+          "location": "Seattle-Tacoma International Airport",
+          "map": "https://www.google.com/maps/search/?api=1&query=Seattle-Tacoma%20International%20Airport"
+        },
+        {
+          "time": "1:00 PM",
+          "end": "",
+          "title": "Depart airport for Olympic Lodge",
+          "type": "drive",
+          "details": "128 miles; approximately 2 hr 24 min in the Day 1 document.",
+          "location": "Olympic Lodge, Port Angeles",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Seattle-Tacoma%20International%20Airport&destination=Olympic%20Lodge%2C%20Port%20Angeles"
+        },
+        {
+          "time": "3:30–4:00 PM",
+          "end": "",
+          "title": "Olympic Lodge check-in",
+          "type": "lodging",
+          "details": "Check-in is 4:00 PM. 140 S. Del Guzzi Drive, Port Angeles, WA; 360-452-2993.",
+          "location": "Olympic Lodge, Port Angeles",
+          "map": "https://www.google.com/maps/search/?api=1&query=Olympic%20Lodge%2C%20Port%20Angeles"
+        },
+        {
+          "time": "4:30 PM",
+          "end": "",
+          "title": "Leave for Hurricane Ridge",
+          "type": "drive",
+          "details": "Approximately 20 miles / 35–40 minutes. Take the National Park Pass.",
+          "location": "Hurricane Ridge",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Olympic%20Lodge%2C%20Port%20Angeles&destination=Hurricane%20Ridge"
+        },
+        {
+          "time": "5:10–5:25 PM",
+          "end": "",
+          "title": "Hurricane Ridge overlooks",
+          "type": "activity",
+          "details": "Park, enjoy the main overlooks, and take photographs.",
+          "location": "Hurricane Ridge",
+          "map": "https://www.google.com/maps/search/?api=1&query=Hurricane%20Ridge"
+        },
+        {
+          "time": "5:25–6:10 PM",
+          "end": "",
+          "title": "Hurricane Hill Trail — partial walk",
+          "type": "hike",
+          "details": "Walk about ½ mile out, or farther if desired. Full trail is about 3.2 miles round trip with 800 ft of climbing. Restrooms are available.",
+          "location": "Hurricane Hill Trail",
+          "map": "https://www.google.com/maps/search/?api=1&query=Hurricane%20Hill%20Trail"
+        },
+        {
+          "time": "6:15 PM",
+          "end": "",
+          "title": "Return to Port Angeles",
+          "type": "drive",
+          "details": "Depart Hurricane Ridge; documented arrival back in Port Angeles is 7:00 PM.",
+          "location": "Port Angeles",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Hurricane%20Ridge&destination=Port%20Angeles"
+        },
+        {
+          "time": "6:30 PM",
+          "end": "",
+          "title": "Kokopelli Grill reservation option",
+          "type": "meal",
+          "details": "203 E Front St; 360-457-6040. Reservation noted as being on Toast.app.",
+          "location": "Kokopelli Grill, Port Angeles",
+          "map": "https://www.google.com/maps/search/?api=1&query=Kokopelli%20Grill%2C%20Port%20Angeles"
+        }
       ]
     },
     {
-      day: 2, date: "Monday, August 17", title: "Olympic National Park",
-      subtitle: "Alpine lake, old-growth forest, waterfalls & Pacific coast",
-      route: "Port Angeles → Lake Crescent → Sol Duc → Forks → Rialto Beach",
-      events: [
-        {time:"7:00 AM", type:"drive", title:"Leave Olympic Lodge", summary:"Early start for parking and a full Olympic day.", details:["Take the National Park Pass"]},
-        {time:"7:30–9:30 AM", type:"hike", title:"Lake Crescent & Marymere Falls", summary:"Start at Storm King Ranger Station, then move the car 2–3 minutes to Lake Crescent Lodge.", details:["22 miles · 33 minutes from Port Angeles","Marymere Falls: about 1.8 miles round trip, 45–60 minutes","Lodge shoreline and dock: 20–30 minutes","Optional Moments in Time Trail: 0.6-mile easy loop","Optional summer kayak, canoe or paddleboard rentals"], map:"Storm King Ranger Station, Olympic National Park"},
-        {time:"10:00 AM–12:30 PM", type:"hike", title:"Sol Duc Falls", summary:"Easy forest hike from the trailhead parking area.", details:["23 miles · 40 minutes from Lake Crescent","Trail: 1.8 miles, about 262 feet of climbing","Arriving before noon helps with parking"], map:"Sol Duc Falls Trailhead"},
-        {time:"12:30–1:30 PM", type:"meal", title:"Lunch in Forks", summary:"Eat before continuing west, where choices are limited.", details:["Sol Duc to Forks: 42 miles · 54 minutes","Options: Longhouse Cafe or Blakeslee’s Bar & Grill","Alternative: Forks Outfitters deli, then picnic at Rialto Beach"], map:"Forks, WA"},
-        {time:"2:00–7:30 PM", type:"coast", title:"Rialto Beach", summary:"Rugged shoreline, sea stacks, driftwood and an optional walk toward Hole-in-the-Wall.", details:["Forks to Rialto Beach: 15 miles · 25 minutes","Hole-in-the-Wall: about 3.3 miles round trip; turn around earlier if desired","Tide pools may be accessible at lower tide","Wear good shoes for rounded stones","Never climb or sit on large driftwood when waves are active","Ruby Beach is the lower-walking alternative"], map:"Rialto Beach, Olympic National Park"},
-        {time:"Evening", type:"drive", title:"Return to Olympic Lodge", summary:"69 miles · 1 hr 25 min.", details:["Second night at Olympic Lodge"], map:"Olympic Lodge by Ayres, Port Angeles, WA"}
+      "day": 2,
+      "date": "Monday, August 17, 2026",
+      "title": "Olympic National Park",
+      "subtitle": "Lake Crescent · Marymere Falls · Sol Duc Falls · Rialto Beach",
+      "dontForget": [
+        "National Park Pass",
+        "Drinks and snacks",
+        "Fill the car with gas tonight",
+        "Check next-day road conditions"
+      ],
+      "storyTitle": "Documented plan",
+      "story": "Anniversary day in Olympic National Park, using the tightened schedule in the Day 2 document.",
+      "events": [
+        {
+          "time": "6:00–10:00 AM",
+          "end": "",
+          "title": "Complimentary hotel breakfast",
+          "type": "meal",
+          "details": "Breakfast hours listed in the document. Take drinks and snacks.",
+          "location": "Olympic Lodge, Port Angeles",
+          "map": "https://www.google.com/maps/search/?api=1&query=Olympic%20Lodge%2C%20Port%20Angeles"
+        },
+        {
+          "time": "8:00 AM",
+          "end": "",
+          "title": "Depart for Storm King Ranger Station",
+          "type": "drive",
+          "details": "22 miles; approximately 33 minutes.",
+          "location": "Storm King Ranger Station",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Olympic%20Lodge%2C%20Port%20Angeles&destination=Storm%20King%20Ranger%20Station"
+        },
+        {
+          "time": "8:35–9:35 AM",
+          "end": "",
+          "title": "Marymere Falls",
+          "type": "hike",
+          "details": "About 1.8 miles round trip; 45–60 minutes; mostly easy old-growth forest walking.",
+          "location": "Marymere Falls",
+          "map": "https://www.google.com/maps/search/?api=1&query=Marymere%20Falls"
+        },
+        {
+          "time": "9:35–10:00 AM",
+          "end": "",
+          "title": "Lake Crescent Lodge shoreline and dock",
+          "type": "activity",
+          "details": "Move the car 2–3 minutes and visit the shoreline and dock.",
+          "location": "Lake Crescent Lodge",
+          "map": "https://www.google.com/maps/search/?api=1&query=Lake%20Crescent%20Lodge"
+        },
+        {
+          "time": "10:00–10:15 AM",
+          "end": "",
+          "title": "Lake Crescent scenic pull-offs",
+          "type": "activity",
+          "details": "Allow 10–15 minutes total.",
+          "location": "Lake Crescent",
+          "map": "https://www.google.com/maps/search/?api=1&query=Lake%20Crescent"
+        },
+        {
+          "time": "10:15–11:00 AM",
+          "end": "",
+          "title": "Drive to Sol Duc Falls",
+          "type": "drive",
+          "details": "23 miles; approximately 45 minutes via US-101 West.",
+          "location": "Sol Duc Falls Trailhead",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Lake%20Crescent%20Lodge&destination=Sol%20Duc%20Falls%20Trailhead"
+        },
+        {
+          "time": "11:00 AM–12:15 PM",
+          "end": "",
+          "title": "Sol Duc Falls",
+          "type": "hike",
+          "details": "Easy 1.8-mile round trip with 262 ft of climbing. Restrooms at the trailhead.",
+          "location": "Sol Duc Falls",
+          "map": "https://www.google.com/maps/search/?api=1&query=Sol%20Duc%20Falls"
+        },
+        {
+          "time": "12:15–12:55 PM",
+          "end": "",
+          "title": "Drive to Forks",
+          "type": "drive",
+          "details": "27 miles; approximately 35–40 minutes.",
+          "location": "Forks, Washington",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Sol%20Duc%20Falls&destination=Forks%2C%20Washington"
+        },
+        {
+          "time": "12:55–1:40 PM",
+          "end": "",
+          "title": "Lunch in Forks or at Rialto Beach",
+          "type": "meal",
+          "details": "The document lists Longhouse Café, Blakeslee’s Bar & Grill, or Forks Outfitters deli as options.",
+          "location": "Forks, Washington",
+          "map": "https://www.google.com/maps/search/?api=1&query=Forks%2C%20Washington"
+        },
+        {
+          "time": "1:40–2:05 PM",
+          "end": "",
+          "title": "Drive to Rialto Beach",
+          "type": "drive",
+          "details": "15 miles; approximately 25 minutes. Take US-101, then Mora Road.",
+          "location": "Rialto Beach",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Forks%2C%20Washington&destination=Rialto%20Beach"
+        },
+        {
+          "time": "2:05–4:00 PM",
+          "end": "",
+          "title": "Rialto Beach",
+          "type": "activity",
+          "details": "Walk north toward Hole-in-the-Wall, turning around whenever desired; explore tide pools only if tide conditions allow.",
+          "location": "Rialto Beach",
+          "map": "https://www.google.com/maps/search/?api=1&query=Rialto%20Beach"
+        },
+        {
+          "time": "4:00–5:25 PM",
+          "end": "",
+          "title": "Return to Olympic Lodge",
+          "type": "drive",
+          "details": "69 miles; approximately 1 hr 25 min.",
+          "location": "Olympic Lodge, Port Angeles",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Rialto%20Beach&destination=Olympic%20Lodge%2C%20Port%20Angeles"
+        }
       ]
     },
     {
-      day: 3, date: "Tuesday, August 18", title: "Rainier & Mount St. Helens",
-      subtitle: "A long scenic transit day to Troutdale",
-      route: "8–10 hours driving · approximately 12–14 hours total",
-      events: [
-        {time:"5:30–6:00 AM", type:"drive", title:"Leave Olympic Lodge for Paradise", summary:"The master plan targets arrival at Rainier by about 9:30 AM.", details:["Source estimates vary: master itinerary says 159 miles · 3 hours; day detail says 176 miles · 3.5 hours","Pack water, snacks and light layers"], map:"Paradise, Mount Rainier National Park"},
-        {time:"9:30 AM–1:30 PM", type:"hike", title:"Mount Rainier — Paradise", summary:"Make Rainier the featured stop, with lunch before continuing.", details:["Myrtle Falls: about 1 mile round trip","Nisqually Vista: about 1.2-mile loop","Skyline Trail: master plan allows 4–6 miles; day notes recommend a 2–4 mile partial out-and-back","Reflection Lakes","Henry M. Jackson Memorial Visitor Center and meadow walks","Quick lunch: Tatoosh Cafe at Paradise Inn","Check current conditions at nps.gov/mora"], map:"Paradise Visitor Center, Mount Rainier"},
-        {time:"1:30–4:00 PM", type:"drive", title:"Drive to Mount St. Helens", summary:"123 miles · 2 hr 35 min to the Science & Learning Center area.", details:["Check Gifford Pinchot National Forest alerts and Washington DOT the night before and morning of travel","Johnston Ridge access has been disrupted; do not rely on Google Maps alone"], map:"Mount St. Helens Science and Learning Center at Coldwater"},
-        {time:"4:00–5:30 PM", type:"view", title:"Mount St. Helens scenic stop", summary:"Treat this as a shorter add-on after Rainier.", details:["Coldwater Lake viewpoints and Science & Learning Center","Winds of Change Trail: about 0.6–1 mile, easy","Optional Hummocks Trail: about 2.3–2.5 miles, moderate","Castle Lake or Elk Rock viewpoints if accessible"], map:"Coldwater Lake, Washington"},
-        {time:"5:30–7:30 PM", type:"drive", title:"Continue to Troutdale", summary:"109 miles · about 2 hours.", details:["Best Western Cascade Inn & Suites","23525 NE Halsey St, Troutdale, OR","503-491-9700 · check-in 3:00 PM","Dinner ideas: Troutdale Station, Wood Village Burrito Shop, Lulu Food Place or Wayfinder Beer"], map:"Best Western Plus Cascade Inn & Suites, Troutdale, OR"}
+      "day": 3,
+      "date": "Tuesday, August 18, 2026",
+      "title": "Mount Rainier & Mount St. Helens",
+      "subtitle": "Port Angeles → Paradise → Coldwater Lake → Troutdale",
+      "dontForget": [
+        "Check official road and park conditions the night before and morning of travel",
+        "Fuel in Elbe or Morton if needed"
+      ],
+      "storyTitle": "Documented plan",
+      "story": "Mount Rainier is the priority stop, followed by the accessible north-side Mount St. Helens locations and the drive to Troutdale.",
+      "events": [
+        {
+          "time": "5:30–6:00 AM",
+          "end": "",
+          "title": "Depart Olympic Lodge",
+          "type": "drive",
+          "details": "The document lists McDonald’s at 1706 E Front St for breakfast. Drive to Paradise: 176 miles / about 3½ hours.",
+          "location": "Paradise, Mount Rainier",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Olympic%20Lodge%2C%20Port%20Angeles&destination=Paradise%2C%20Mount%20Rainier"
+        },
+        {
+          "time": "9:15 AM",
+          "end": "",
+          "title": "Paradise Visitor Center",
+          "type": "activity",
+          "details": "Henry M. Jackson Memorial Visitor Center; restrooms and snacks noted.",
+          "location": "Henry M. Jackson Memorial Visitor Center",
+          "map": "https://www.google.com/maps/search/?api=1&query=Henry%20M.%20Jackson%20Memorial%20Visitor%20Center"
+        },
+        {
+          "time": "9:30–10:40 AM",
+          "end": "",
+          "title": "Skyline Trail — partial to Myrtle Falls",
+          "type": "hike",
+          "details": "Myrtle Falls is about 0.9 mile round trip; the planned partial hike is approximately 2 miles total.",
+          "location": "Myrtle Falls, Mount Rainier",
+          "map": "https://www.google.com/maps/search/?api=1&query=Myrtle%20Falls%2C%20Mount%20Rainier"
+        },
+        {
+          "time": "10:45–11:15 AM",
+          "end": "",
+          "title": "Nisqually Vista Trail",
+          "type": "hike",
+          "details": "Easy 1.2-mile loop; trailhead near the visitor center.",
+          "location": "Nisqually Vista Trail",
+          "map": "https://www.google.com/maps/search/?api=1&query=Nisqually%20Vista%20Trail"
+        },
+        {
+          "time": "11:20–11:50 AM",
+          "end": "",
+          "title": "Lunch at Tatoosh Café",
+          "type": "meal",
+          "details": "Walk to Paradise Inn; grab-and-go sandwiches, soups, pastries, coffee, and snacks are noted.",
+          "location": "Tatoosh Café, Paradise Inn",
+          "map": "https://www.google.com/maps/search/?api=1&query=Tatoosh%20Caf%C3%A9%2C%20Paradise%20Inn"
+        },
+        {
+          "time": "11:50 AM–12:15 PM",
+          "end": "",
+          "title": "Reflection Lakes",
+          "type": "activity",
+          "details": "Drive 5–10 minutes beyond Paradise and stop for photographs.",
+          "location": "Reflection Lakes, Mount Rainier",
+          "map": "https://www.google.com/maps/search/?api=1&query=Reflection%20Lakes%2C%20Mount%20Rainier"
+        },
+        {
+          "time": "12:15–2:45 PM",
+          "end": "",
+          "title": "Drive to Mount St. Helens",
+          "type": "drive",
+          "details": "123 miles; approximately 2 hr 35 min. Enter via SR-504.",
+          "location": "Science and Learning Center at Coldwater",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Reflection%20Lakes%2C%20Mount%20Rainier&destination=Science%20and%20Learning%20Center%20at%20Coldwater"
+        },
+        {
+          "time": "2:45–3:30 PM",
+          "end": "",
+          "title": "Science & Learning Center at Coldwater",
+          "type": "activity",
+          "details": "Milepost 43. Exhibits, restrooms, viewpoints, and an optional portion of the Winds of Change Trail.",
+          "location": "Science and Learning Center at Coldwater",
+          "map": "https://www.google.com/maps/search/?api=1&query=Science%20and%20Learning%20Center%20at%20Coldwater"
+        },
+        {
+          "time": "3:35–3:55 PM",
+          "end": "",
+          "title": "Coldwater Lake",
+          "type": "activity",
+          "details": "Drive about two miles to the boat-launch/day-use area; walk only far enough for the lake viewpoints/boardwalk.",
+          "location": "Coldwater Lake",
+          "map": "https://www.google.com/maps/search/?api=1&query=Coldwater%20Lake"
+        },
+        {
+          "time": "4:00 PM",
+          "end": "",
+          "title": "Depart for Troutdale",
+          "type": "drive",
+          "details": "109 miles; approximately 2 hours, backtracking to I-5 before heading south.",
+          "location": "Best Western Plus Cascade Inn & Suites, Troutdale",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Coldwater%20Lake&destination=Best%20Western%20Plus%20Cascade%20Inn%20%26%20Suites%2C%20Troutdale"
+        },
+        {
+          "time": "5:30–6:00 PM",
+          "end": "",
+          "title": "Check in at Troutdale",
+          "type": "lodging",
+          "details": "Best Western Plus Cascade Inn & Suites, 23525 NE Halsey St; 503-491-9700.",
+          "location": "Best Western Plus Cascade Inn & Suites, Troutdale",
+          "map": "https://www.google.com/maps/search/?api=1&query=Best%20Western%20Plus%20Cascade%20Inn%20%26%20Suites%2C%20Troutdale"
+        }
       ]
     },
     {
-      day: 4, date: "Wednesday, August 19", title: "Columbia River Gorge",
-      subtitle: "Waterfalls, forest trails & big river views",
-      route: "Troutdale → Historic Columbia River Highway → Hood River · master estimate 70 miles to The Dalles",
-      events: [
-        {time:"8:00 AM", type:"drive", title:"Depart Troutdale", summary:"Check TripCheck.com for Historic Columbia River Highway conditions.", details:["The master itinerary refers to Highway 100; verify the intended road against current TripCheck listings."]},
-        {time:"8:30–8:55 AM", type:"view", title:"Vista House at Crown Point", summary:"Sweeping first view of the Columbia River Gorge.", details:["11 miles · 22 minutes from hotel","Allow about 20 minutes"], map:"Vista House at Crown Point"},
-        {time:"9:05–9:50 AM", type:"hike", title:"Latourell Falls", summary:"Lower-falls visit or a longer loop among basalt cliffs.", details:["2.5 miles · 6 minutes from Vista House","Lower falls: allow about 45 minutes","Full loop: about 2.4 miles, moderate"], map:"Latourell Falls Trailhead"},
-        {time:"10:10–11:30 AM", type:"hike", title:"Multnomah Falls", summary:"Classic Gorge waterfall and historic lodge.", details:["6 miles · 12 minutes from Latourell","About 2.4 miles round trip to the top with a steady climb","Snack or coffee available at the lodge"], map:"Multnomah Falls"},
-        {time:"11:30 AM–12:15 PM", type:"meal", title:"Lunch", summary:"Choose convenience at Multnomah or continue toward Cascade Locks.", details:["Multnomah Falls Lodge or Sugarpine Drive-In","Cascade Locks: Thunder Island Brewing, Eastwind Drive-In, Bridgeside or Cascade Locks Ale House"]},
-        {time:"Afternoon", type:"hike", title:"Choose the afternoon hike", summary:"The source offers alternatives rather than a single locked plan.", details:["Angel’s Rest: 4.3–4.5 miles round trip; major river viewpoint","Wahkeena Falls: short 0.2-mile uphill walk to the bridge/viewing area","Wahclella Falls: about 2 miles round trip, 300 feet climbing, forest canyon","Optional Bonneville Dam/hatchery for fish ladder and an indoor break"], map:"Columbia River Gorge, Oregon"},
-        {time:"3:15–4:00 PM", type:"view", title:"Rowena Crest Viewpoint", summary:"Panoramic eastern Gorge landscape and the famous curving highway.", details:["36 miles · about 40 minutes from the western waterfall corridor","Allow 20–45 minutes","Located east of Hood River near Mosier"], map:"Rowena Crest Viewpoint"},
-        {time:"4:20–4:45 PM", type:"hotel", title:"Check in at Hood River", summary:"Best Western Plus Hood River Inn.", details:["13 miles · 20 minutes from Rowena Crest","1108 E. Marina Way, Hood River, OR","541-386-2200 · check-in 4:00 PM","Optional waterfront walk","Dinner: Pfriem, Ferment, Riverside or Celilo"], map:"Best Western Plus Hood River Inn"}
+      "day": 4,
+      "date": "Wednesday, August 19, 2026",
+      "title": "Columbia River Gorge",
+      "subtitle": "Troutdale → Historic Columbia River Highway → Hood River",
+      "dontForget": [
+        "Check TripCheck.com before departure",
+        "Bridal Veil Falls is the first stop to omit if behind schedule"
+      ],
+      "storyTitle": "Documented plan",
+      "story": "A west-to-east Gorge day with waterfalls, viewpoints, lunch at Multnomah Falls Lodge, and arrival in Hood River.",
+      "events": [
+        {
+          "time": "7:45 AM",
+          "end": "",
+          "title": "Depart Troutdale",
+          "type": "drive",
+          "details": "Follow I-84 to Exit 22, then the Historic Columbia River Highway; 11 miles / 22 minutes to Crown Point.",
+          "location": "Vista House at Crown Point",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Best%20Western%20Plus%20Cascade%20Inn%20%26%20Suites%2C%20Troutdale&destination=Vista%20House%20at%20Crown%20Point"
+        },
+        {
+          "time": "8:05–8:30 AM",
+          "end": "",
+          "title": "Vista House at Crown Point",
+          "type": "activity",
+          "details": "Walk around the building and observation decks. The building opens at 9:00 AM.",
+          "location": "Vista House at Crown Point",
+          "map": "https://www.google.com/maps/search/?api=1&query=Vista%20House%20at%20Crown%20Point"
+        },
+        {
+          "time": "8:40–9:20 AM",
+          "end": "",
+          "title": "Latourell Falls",
+          "type": "hike",
+          "details": "Short 0.3-mile round trip to the base of the falls.",
+          "location": "Latourell Falls",
+          "map": "https://www.google.com/maps/search/?api=1&query=Latourell%20Falls"
+        },
+        {
+          "time": "9:30–10:05 AM",
+          "end": "",
+          "title": "Bridal Veil Falls",
+          "type": "hike",
+          "details": "Easy 0.5-mile round trip. The document identifies this as the first stop to delete if needed.",
+          "location": "Bridal Veil Falls, Oregon",
+          "map": "https://www.google.com/maps/search/?api=1&query=Bridal%20Veil%20Falls%2C%20Oregon"
+        },
+        {
+          "time": "10:15–10:40 AM",
+          "end": "",
+          "title": "Wahkeena Falls",
+          "type": "hike",
+          "details": "Walk the 0.4-mile round trip to the viewing bridge; park here for the next several hours.",
+          "location": "Wahkeena Falls",
+          "map": "https://www.google.com/maps/search/?api=1&query=Wahkeena%20Falls"
+        },
+        {
+          "time": "10:40–10:55 AM",
+          "end": "",
+          "title": "Walk to Multnomah Falls",
+          "type": "hike",
+          "details": "Approximately 0.6 mile on the paved pedestrian path.",
+          "location": "Multnomah Falls",
+          "map": "https://www.google.com/maps/search/?api=1&query=Multnomah%20Falls"
+        },
+        {
+          "time": "11:00 AM–12:45 PM",
+          "end": "",
+          "title": "Multnomah Falls & lodge lunch",
+          "type": "activity",
+          "details": "See the lower viewpoint, walk to Benson Bridge, and have lunch at Multnomah Falls Lodge.",
+          "location": "Multnomah Falls Lodge",
+          "map": "https://www.google.com/maps/search/?api=1&query=Multnomah%20Falls%20Lodge"
+        },
+        {
+          "time": "12:45–1:00 PM",
+          "end": "",
+          "title": "Return to Wahkeena parking",
+          "type": "hike",
+          "details": "Walk the 0.6-mile connector back to the car.",
+          "location": "Wahkeena Falls",
+          "map": "https://www.google.com/maps/search/?api=1&query=Wahkeena%20Falls"
+        },
+        {
+          "time": "1:00–2:30 PM",
+          "end": "",
+          "title": "Wahclella Falls",
+          "type": "hike",
+          "details": "2.0 miles round trip with 300 ft of climbing, or shorten the visit to the bridge.",
+          "location": "Wahclella Falls",
+          "map": "https://www.google.com/maps/search/?api=1&query=Wahclella%20Falls"
+        },
+        {
+          "time": "2:30–4:00 PM",
+          "end": "",
+          "title": "Rowena Crest Viewpoint",
+          "type": "activity",
+          "details": "Enjoy the overlook; the first ½–1 mile of Tom McCall Point Trail is optional.",
+          "location": "Rowena Crest Viewpoint",
+          "map": "https://www.google.com/maps/search/?api=1&query=Rowena%20Crest%20Viewpoint"
+        },
+        {
+          "time": "4:00–4:20 PM",
+          "end": "",
+          "title": "Drive to Hood River",
+          "type": "drive",
+          "details": "13 miles; approximately 20 minutes.",
+          "location": "Best Western Plus Hood River Inn",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Rowena%20Crest%20Viewpoint&destination=Best%20Western%20Plus%20Hood%20River%20Inn"
+        },
+        {
+          "time": "4:20 PM",
+          "end": "",
+          "title": "Best Western Plus Hood River Inn",
+          "type": "lodging",
+          "details": "1108 E. Marina Way, Hood River; 541-386-2200. Check-in is 4:00 PM.",
+          "location": "Best Western Plus Hood River Inn",
+          "map": "https://www.google.com/maps/search/?api=1&query=Best%20Western%20Plus%20Hood%20River%20Inn"
+        }
       ]
     },
     {
-      day: 5, date: "Thursday, August 20", title: "Cannon Beach",
-      subtitle: "Haystack Rock, coastal town & sunset",
-      route: "Hood River → Cannon Beach · 142 miles · 2 hr 45 min",
-      events: [
-        {time:"Morning–afternoon", type:"drive", title:"Drive to Cannon Beach", summary:"142 miles · 2 hr 45 min.", details:["Surfsand Resort, 148 W. Gower, Cannon Beach, OR","503-436-2274 · check-in 4:00 PM"], map:"Surfsand Resort, Cannon Beach, OR"},
-        {time:"After check-in", type:"walk", title:"Leave the car parked", summary:"The hotel is positioned for a walkable Cannon Beach experience.", details:["Walk directly onto the beach","Haystack Rock is only a few minutes on foot","Downtown and nearby restaurants are walkable"], map:"Haystack Rock, Cannon Beach"},
-        {time:"Low tide", type:"coast", title:"Haystack Rock tide pools", summary:"Look for sea stars, anemones and small crabs.", details:["Check the tide before walking out","Respect posted wildlife-protection boundaries"]},
-        {time:"Late afternoon", type:"view", title:"Optional Ecola State Park", summary:"Coastline and Haystack Rock overlooks north of town.", details:["5.4 miles north of Cannon Beach","Source estimates about 37–38 minutes by the alternate road","Optional; driving is not otherwise necessary"], map:"Ecola State Park"},
-        {time:"Sunset", type:"coast", title:"Beach walk", summary:"Walk north toward Haystack Rock and continue along the shoreline.", details:["Wet sand can mirror the evening sky","Plan the evening around sunset"], map:"Cannon Beach, Oregon"}
+      "day": 5,
+      "date": "Thursday, August 20, 2026",
+      "title": "Cannon Beach",
+      "subtitle": "Hood River → Cannon Beach",
+      "dontForget": [
+        "Wayfarer reservation at 8:00 PM",
+        "Check tide conditions before exploring tide pools"
+      ],
+      "storyTitle": "Documented plan",
+      "story": "Drive to Cannon Beach, visit Haystack Rock and downtown, check in at Surfsand Resort, and attend the documented Wayfarer dinner reservation.",
+      "events": [
+        {
+          "time": "8:00 AM",
+          "end": "",
+          "title": "Breakfast in Hood River",
+          "type": "meal",
+          "details": "Hotel complimentary breakfast; Bette’s Place is listed as an alternative.",
+          "location": "Best Western Plus Hood River Inn",
+          "map": "https://www.google.com/maps/search/?api=1&query=Best%20Western%20Plus%20Hood%20River%20Inn"
+        },
+        {
+          "time": "9:00 AM",
+          "end": "",
+          "title": "Depart Hood River",
+          "type": "drive",
+          "details": "Approximately 142–145 miles / 2 hr 30–45 min via I-84, I-205, US-26, and US-101.",
+          "location": "Cannon Beach, Oregon",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Best%20Western%20Plus%20Hood%20River%20Inn&destination=Cannon%20Beach%2C%20Oregon"
+        },
+        {
+          "time": "11:45 AM",
+          "end": "",
+          "title": "Arrive and park in Cannon Beach",
+          "type": "activity",
+          "details": "Haystack Rock Public Parking at 1172 S Hemlock St is listed if the room is not ready.",
+          "location": "Haystack Rock Public Parking, Cannon Beach",
+          "map": "https://www.google.com/maps/search/?api=1&query=Haystack%20Rock%20Public%20Parking%2C%20Cannon%20Beach"
+        },
+        {
+          "time": "12:00–1:00 PM",
+          "end": "",
+          "title": "Lunch at Driftwood Restaurant & Lounge",
+          "type": "meal",
+          "details": "179 N Hemlock St.",
+          "location": "Driftwood Restaurant & Lounge, Cannon Beach",
+          "map": "https://www.google.com/maps/search/?api=1&query=Driftwood%20Restaurant%20%26%20Lounge%2C%20Cannon%20Beach"
+        },
+        {
+          "time": "1:00–2:00 PM",
+          "end": "",
+          "title": "Haystack Rock & beach walk",
+          "type": "activity",
+          "details": "Walk the beach, photograph Haystack Rock, watch seabirds and marine life, and explore tide pools only if conditions allow.",
+          "location": "Haystack Rock, Cannon Beach",
+          "map": "https://www.google.com/maps/search/?api=1&query=Haystack%20Rock%2C%20Cannon%20Beach"
+        },
+        {
+          "time": "2:15–3:30 PM",
+          "end": "",
+          "title": "Walk toward Ecola Creek",
+          "type": "hike",
+          "details": "Walk north along the beach, then return through town.",
+          "location": "Ecola Creek, Cannon Beach",
+          "map": "https://www.google.com/maps/search/?api=1&query=Ecola%20Creek%2C%20Cannon%20Beach"
+        },
+        {
+          "time": "3:00–3:45 PM",
+          "end": "",
+          "title": "Explore downtown Cannon Beach",
+          "type": "activity",
+          "details": "Galleries, boutiques, bookstores, coffee shops, and public art are listed.",
+          "location": "Downtown Cannon Beach",
+          "map": "https://www.google.com/maps/search/?api=1&query=Downtown%20Cannon%20Beach"
+        },
+        {
+          "time": "4:00 PM",
+          "end": "",
+          "title": "Check in at Surfsand Resort",
+          "type": "lodging",
+          "details": "148 W. Gower; 503-436-2274. Fresh-baked cookies are listed from 3:00–6:00 PM.",
+          "location": "Surfsand Resort",
+          "map": "https://www.google.com/maps/search/?api=1&query=Surfsand%20Resort"
+        },
+        {
+          "time": "8:00 PM",
+          "end": "",
+          "title": "Wayfarer dinner reservation",
+          "type": "meal",
+          "details": "Wayfarer Restaurant & Lounge, 1190 Pacific Dr; 503-436-1108.",
+          "location": "Wayfarer Restaurant & Lounge, Cannon Beach",
+          "map": "https://www.google.com/maps/search/?api=1&query=Wayfarer%20Restaurant%20%26%20Lounge%2C%20Cannon%20Beach"
+        },
+        {
+          "time": "After dinner",
+          "end": "",
+          "title": "Beach walk",
+          "type": "hike",
+          "details": "The document suggests another beach walk after dinner.",
+          "location": "Haystack Rock, Cannon Beach",
+          "map": "https://www.google.com/maps/search/?api=1&query=Haystack%20Rock%2C%20Cannon%20Beach"
+        }
       ]
     },
     {
-      day: 6, date: "Friday, August 21", title: "Cape Perpetua",
-      subtitle: "Cannon Beach → Yachats · rugged coast & high-tide drama",
-      route: "132 miles · 3 hours",
-      events: [
-        {time:"Morning", type:"coast", title:"More Cannon Beach time, if needed", summary:"The master itinerary leaves room before the drive south.", details:["Check the Cape Perpetua high-tide time before departing."]},
-        {time:"Midday", type:"drive", title:"Drive to Yachats", summary:"132 miles · about 3 hours.", details:["Overleaf Lodge & Spa","280 Overleaf Lodge Lane, Yachats, OR","541-547-4885 · check-in 4:00 PM"], map:"Overleaf Lodge & Spa, Yachats, OR"},
-        {time:"Afternoon", type:"view", title:"Cape Perpetua Overlook", summary:"Drive to one of the highest accessible viewpoints on the Oregon coast.", details:["Start at the visitor center area","Huge panoramic coastal views"], map:"Cape Perpetua Visitor Center"},
-        {time:"About 1 hour before high tide", type:"coast", title:"Thor’s Well & Cook’s Chasm", summary:"Time the visit for incoming or high tide, while keeping a safe distance.", details:["Cook’s Chasm has limited parking","Thor’s Well is down a walking path from the visitor center area","Never turn your back on the ocean; waves are unpredictable","Check tideschart.com for Cape Perpetua"], map:"Thor's Well, Oregon"},
-        {time:"Afternoon", type:"coast", title:"Devil’s Churn", summary:"Narrow inlet where waves crash dramatically.", details:["Parking is available","Attractions are spread along Highway 101; short drives are more practical than walking everything"], map:"Devil's Churn, Oregon"},
-        {time:"Flexible", type:"hike", title:"Optional coastal or forest walk", summary:"Choose a short trail to match the tide schedule and energy.", details:["Discovery Loop: about 1.5 miles; optional Cooks Ridge spur","Cummins Creek: walk about 1 mile out, then return","Oregon Coast Trail: rooty coastal walking","Gwynn Creek: 3 miles, steeper with roots and stairs","Full Cummins Creek Loop is 9 miles and a day-long option"], map:"Cape Perpetua Scenic Area"},
-        {time:"Sunset", type:"hotel", title:"Return to Overleaf Lodge", summary:"Enjoy the shoreline and evening near the hotel.", details:["Coastal trail and rocky viewpoints are accessible directly from the lodge"], map:"Overleaf Lodge & Spa"}
+      "day": 6,
+      "date": "Friday, August 21, 2026",
+      "title": "Cannon Beach to Cape Perpetua",
+      "subtitle": "Cannon Beach → Yachats → Cape Perpetua",
+      "dontForget": [
+        "Confirm current trail and ocean conditions at the visitor center",
+        "Stay well back from exposed rocks"
+      ],
+      "storyTitle": "Documented plan",
+      "story": "Drive the coast to Yachats, visit the principal Cape Perpetua locations, then check in at Overleaf Lodge.",
+      "events": [
+        {
+          "time": "7:30–8:30 AM",
+          "end": "",
+          "title": "Breakfast",
+          "type": "meal",
+          "details": "Wayfarer is the primary documented plan; Pig ’N Pancake is the listed alternative.",
+          "location": "Wayfarer Restaurant & Lounge, Cannon Beach",
+          "map": "https://www.google.com/maps/search/?api=1&query=Wayfarer%20Restaurant%20%26%20Lounge%2C%20Cannon%20Beach"
+        },
+        {
+          "time": "8:30–9:00 AM",
+          "end": "",
+          "title": "Pack, load, and check out",
+          "type": "lodging",
+          "details": "Be ready to leave Cannon Beach at 9:00 AM.",
+          "location": "Surfsand Resort",
+          "map": "https://www.google.com/maps/search/?api=1&query=Surfsand%20Resort"
+        },
+        {
+          "time": "9:00 AM",
+          "end": "",
+          "title": "Depart Cannon Beach for Yachats",
+          "type": "drive",
+          "details": "Approximately 130 miles / 3 hours on US-101.",
+          "location": "Yachats, Oregon",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Surfsand%20Resort&destination=Yachats%2C%20Oregon"
+        },
+        {
+          "time": "12:00–1:00 PM",
+          "end": "",
+          "title": "Lunch in Yachats",
+          "type": "meal",
+          "details": "The document ranks Luna Sea Fish House first and Drift Inn second, with Beach Street Kitchen and Big Dog BBQ also listed.",
+          "location": "Yachats, Oregon",
+          "map": "https://www.google.com/maps/search/?api=1&query=Yachats%2C%20Oregon"
+        },
+        {
+          "time": "1:00–1:20 PM",
+          "end": "",
+          "title": "Stop at Overleaf Lodge",
+          "type": "lodging",
+          "details": "Ask about the room or leave luggage/car as allowed. Official check-in is 4:00 PM.",
+          "location": "Overleaf Lodge & Spa",
+          "map": "https://www.google.com/maps/search/?api=1&query=Overleaf%20Lodge%20%26%20Spa"
+        },
+        {
+          "time": "1:35–2:05 PM",
+          "end": "",
+          "title": "Cape Perpetua Visitor Center",
+          "type": "activity",
+          "details": "2400 US-101. Exhibits, views, restrooms, and current trail/ocean-condition information.",
+          "location": "Cape Perpetua Visitor Center",
+          "map": "https://www.google.com/maps/search/?api=1&query=Cape%20Perpetua%20Visitor%20Center"
+        },
+        {
+          "time": "2:05–2:45 PM",
+          "end": "",
+          "title": "Cape Perpetua Overlook",
+          "type": "activity",
+          "details": "Drive up Lookout Road rather than hiking to the summit.",
+          "location": "Cape Perpetua Overlook",
+          "map": "https://www.google.com/maps/search/?api=1&query=Cape%20Perpetua%20Overlook"
+        },
+        {
+          "time": "3:00–3:50 PM",
+          "end": "",
+          "title": "Cook’s Chasm, Spouting Horn & Thor’s Well",
+          "type": "activity",
+          "details": "Use the separate Cook’s Chasm parking area. Do not structure the visit around evening high tide.",
+          "location": "Thor's Well, Oregon",
+          "map": "https://www.google.com/maps/search/?api=1&query=Thor's%20Well%2C%20Oregon"
+        },
+        {
+          "time": "4:00–4:40 PM",
+          "end": "",
+          "title": "Devil’s Churn",
+          "type": "activity",
+          "details": "Use the separate parking area and view the inlet without scrambling onto the rocks.",
+          "location": "Devil's Churn, Oregon",
+          "map": "https://www.google.com/maps/search/?api=1&query=Devil's%20Churn%2C%20Oregon"
+        },
+        {
+          "time": "5:00 PM",
+          "end": "",
+          "title": "Check in at Overleaf Lodge",
+          "type": "lodging",
+          "details": "280 Overleaf Lodge Lane; 541-547-4885.",
+          "location": "Overleaf Lodge & Spa",
+          "map": "https://www.google.com/maps/search/?api=1&query=Overleaf%20Lodge%20%26%20Spa"
+        },
+        {
+          "time": "5:15–6:00 PM",
+          "end": "",
+          "title": "804 Trail",
+          "type": "hike",
+          "details": "Easy shoreline walk directly from the lodge; length is flexible.",
+          "location": "804 Trail, Yachats",
+          "map": "https://www.google.com/maps/search/?api=1&query=804%20Trail%2C%20Yachats"
+        },
+        {
+          "time": "6:15–7:30 PM",
+          "end": "",
+          "title": "Dinner in Yachats",
+          "type": "meal",
+          "details": "Ona is listed first; Drift Inn, Luna Sea, and WildCraft are documented alternatives.",
+          "location": "Yachats, Oregon",
+          "map": "https://www.google.com/maps/search/?api=1&query=Yachats%2C%20Oregon"
+        }
       ]
     },
     {
-      day: 7, date: "Saturday, August 22", title: "Cape Perpetua to Bend",
-      subtitle: "Coast to high desert",
-      route: "200 miles · 4 hours",
-      events: [
-        {time:"Morning", type:"coast", title:"More Cape Perpetua time", summary:"The master itinerary leaves the morning flexible before heading inland.", details:[]},
-        {time:"Midday", type:"drive", title:"Drive to Bend", summary:"200 miles · about 4 hours.", details:["Pine Ridge Inn","1350 SW Colorado Ave, Bend, OR 97702","(541) 389-6137 · check-in 4:00 PM"], map:"Pine Ridge Inn, Bend, OR"},
-        {time:"After check-in", type:"walk", title:"Deschutes River Trail", summary:"Easy river walk directly from Pine Ridge Inn toward the Old Mill District.", details:["About 15–25 minutes to Old Mill","Good evening light and relaxed terrain"], map:"Deschutes River Trail, Bend, OR"},
-        {time:"Evening", type:"meal", title:"Dinner in Bend", summary:"Choose a relaxed local meal or the trip’s special dinner.", details:["Zydeco Kitchen & Cocktails","Deschutes Brewery Bend Public House","Spork","Bos Taurus for a special dinner"]},
-        {time:"Optional", type:"view", title:"Easy Bend add-ons", summary:"Keep the arrival day restorative.", details:["Sunset at drive-up Pilot Butte","Downtown Bend browsing","Cascade Lakes Scenic Drive: Sparks Lake, Elk Lake, Mount Bachelor","Lava Lands / Newberry volcanic area"], map:"Pilot Butte State Scenic Viewpoint"}
+      "day": 7,
+      "date": "Saturday, August 22, 2026",
+      "title": "Cape Perpetua to Bend",
+      "subtitle": "Yachats → Newport → Bend",
+      "dontForget": [
+        "Buy lunch and drinks for the fishing day",
+        "Allow flexibility for traffic and construction on US-20"
+      ],
+      "storyTitle": "Documented plan",
+      "story": "Complete the Discovery Loop, use the optional flex stop only if desired, then travel to Bend and prepare for fishing day.",
+      "events": [
+        {
+          "time": "7:30–8:30 AM",
+          "end": "",
+          "title": "Breakfast at Overleaf",
+          "type": "meal",
+          "details": "A fully cooked breakfast is included.",
+          "location": "Overleaf Lodge & Spa",
+          "map": "https://www.google.com/maps/search/?api=1&query=Overleaf%20Lodge%20%26%20Spa"
+        },
+        {
+          "time": "8:30–8:45 AM",
+          "end": "",
+          "title": "Pack, load, and check out",
+          "type": "lodging",
+          "details": "Check out before returning to Cape Perpetua.",
+          "location": "Overleaf Lodge & Spa",
+          "map": "https://www.google.com/maps/search/?api=1&query=Overleaf%20Lodge%20%26%20Spa"
+        },
+        {
+          "time": "8:45 AM",
+          "end": "",
+          "title": "Drive to Cape Perpetua Visitor Center",
+          "type": "drive",
+          "details": "Approximately 10 minutes.",
+          "location": "Cape Perpetua Visitor Center",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Overleaf%20Lodge%20%26%20Spa&destination=Cape%20Perpetua%20Visitor%20Center"
+        },
+        {
+          "time": "9:00–10:15 AM",
+          "end": "",
+          "title": "Discovery Loop Trail",
+          "type": "hike",
+          "details": "Approximately 1.5 miles / 60–75 minutes, returning to the visitor center.",
+          "location": "Discovery Loop Trail, Cape Perpetua",
+          "map": "https://www.google.com/maps/search/?api=1&query=Discovery%20Loop%20Trail%2C%20Cape%20Perpetua"
+        },
+        {
+          "time": "10:15–10:30 AM",
+          "end": "",
+          "title": "Optional final Cape Perpetua stop",
+          "type": "activity",
+          "details": "Flex time to revisit the overlook, Devil’s Churn, or Thor’s Well/Cook’s Chasm if desired.",
+          "location": "Cape Perpetua",
+          "map": "https://www.google.com/maps/search/?api=1&query=Cape%20Perpetua"
+        },
+        {
+          "time": "10:30 AM",
+          "end": "",
+          "title": "Depart for Bend",
+          "type": "drive",
+          "details": "About 200 miles. US-101 north to Newport, then US-20 to Bend; 4–4½ hours of actual driving plus lunch/stops.",
+          "location": "Pine Ridge Inn, Bend",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Cape%20Perpetua%20Visitor%20Center&destination=Pine%20Ridge%20Inn%2C%20Bend"
+        },
+        {
+          "time": "12:30 PM",
+          "end": "",
+          "title": "Lunch en route",
+          "type": "meal",
+          "details": "Stop conveniently around Corvallis or Albany; allow approximately 45 minutes.",
+          "location": "Albany, Oregon",
+          "map": "https://www.google.com/maps/search/?api=1&query=Albany%2C%20Oregon"
+        },
+        {
+          "time": "3:30–4:00 PM",
+          "end": "",
+          "title": "Arrive at Pine Ridge Inn",
+          "type": "lodging",
+          "details": "1350 SW Colorado Ave, Bend; 541-389-6137. Check-in is 4:00 PM.",
+          "location": "Pine Ridge Inn, Bend",
+          "map": "https://www.google.com/maps/search/?api=1&query=Pine%20Ridge%20Inn%2C%20Bend"
+        },
+        {
+          "time": "4:00–5:30 PM",
+          "end": "",
+          "title": "Relax or walk the Deschutes River Trail",
+          "type": "activity",
+          "details": "The trail is walkable from the hotel; the activity is optional.",
+          "location": "Deschutes River Trail, Bend",
+          "map": "https://www.google.com/maps/search/?api=1&query=Deschutes%20River%20Trail%2C%20Bend"
+        },
+        {
+          "time": "6:00 PM",
+          "end": "",
+          "title": "Dinner in Bend",
+          "type": "meal",
+          "details": "The document lists Zydeco as preferred and several alternatives, including Deschutes Brewery, Cuban Kitchen, and Anthony’s.",
+          "location": "Bend, Oregon",
+          "map": "https://www.google.com/maps/search/?api=1&query=Bend%2C%20Oregon"
+        },
+        {
+          "time": "Evening",
+          "end": "",
+          "title": "Prepare for fishing day",
+          "type": "activity",
+          "details": "Buy lunch, Gatorade, and Diet Pepsi; get to bed early for the drive to Madras.",
+          "location": "Bend, Oregon",
+          "map": "https://www.google.com/maps/search/?api=1&query=Bend%2C%20Oregon"
+        }
       ]
     },
     {
-      day: 8, date: "Sunday, August 23", title: "Lower Deschutes Fly Fishing",
-      subtitle: "Guided float from Warm Springs to Trout Creek",
-      route: "Bend → Safeway in Madras · 45 miles · 58 minutes",
-      events: [
-        {time:"Confirm with guide", type:"drive", title:"Meet at Safeway in Madras", summary:"45 miles · 58 minutes from Bend.", details:["The Fly Fishers Place, Sisters, OR","Shop contact noted as Aaron","Guide: Steve Erickson"], map:"Safeway, Madras, OR"},
-        {time:"Fishing day", type:"fish", title:"Float Warm Springs to Trout Creek", summary:"Target red-side rainbow trout and whitefish on the Lower Deschutes.", details:["Fishing from a boat is prohibited on the Lower Deschutes","Bring your own lunch","Guide has a cooler with drinks and snacks","Open question from source: are flies, tippet and leaders supplied or add-ons?"], map:"Warm Springs, Oregon"},
-        {time:"Evening", type:"hotel", title:"Return to Pine Ridge Inn", summary:"Second Bend night at Pine Ridge Inn.", details:["1350 SW Colorado Ave, Bend, OR"], map:"Pine Ridge Inn, Bend, OR"}
+      "day": 8,
+      "date": "Sunday, August 23, 2026",
+      "title": "Lower Deschutes Fly Fishing",
+      "subtitle": "Bend → Madras / Lower Deschutes → Bend",
+      "dontForget": [
+        "Oregon fishing license",
+        "Own lunch",
+        "Reusable water bottle",
+        "Confirm meeting time",
+        "Confirm float, wading staff, water temperature, and drinks"
+      ],
+      "storyTitle": "Items requiring confirmation",
+      "story": "The guide is Steve Erickson through The Fly Fisher’s Place. The meeting time and whether the float is Warm Springs to Trout Creek are not confirmed in the document.",
+      "events": [
+        {
+          "time": "Early morning",
+          "end": "",
+          "title": "Breakfast",
+          "type": "meal",
+          "details": "Pine Ridge Inn provides a continental-style complimentary breakfast. The document also lists McDonald’s at 1001 SE 3rd St.",
+          "location": "Pine Ridge Inn, Bend",
+          "map": "https://www.google.com/maps/search/?api=1&query=Pine%20Ridge%20Inn%2C%20Bend"
+        },
+        {
+          "time": "Before fishing",
+          "end": "",
+          "title": "Obtain Oregon fishing license",
+          "type": "activity",
+          "details": "License information: https://myodfw.com/fishing/licensing-info",
+          "location": "Bend, Oregon",
+          "map": "https://www.google.com/maps/search/?api=1&query=Bend%2C%20Oregon"
+        },
+        {
+          "time": "TBD",
+          "end": "",
+          "title": "Meet at Safeway in Madras",
+          "type": "drive",
+          "details": "Approximately 45 miles / 58 minutes from Bend. Meeting time is not confirmed.",
+          "location": "Safeway, Madras, Oregon",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Pine%20Ridge%20Inn%2C%20Bend&destination=Safeway%2C%20Madras%2C%20Oregon"
+        },
+        {
+          "time": "TBD",
+          "end": "",
+          "title": "Guided fly-fishing trip",
+          "type": "activity",
+          "details": "Guide: Steve Erickson, The Fly Fisher’s Place. Warm Springs to Trout Creek is written as a question and remains unconfirmed. Fishing from a boat is prohibited on the Lower Deschutes.",
+          "location": "Lower Deschutes River",
+          "map": "https://www.google.com/maps/search/?api=1&query=Lower%20Deschutes%20River"
+        },
+        {
+          "time": "During trip",
+          "end": "",
+          "title": "Bring lunch and water",
+          "type": "meal",
+          "details": "Bring your own lunch and reusable water bottle. The guide has a cooler with drinks and snacks.",
+          "location": "Lower Deschutes River",
+          "map": "https://www.google.com/maps/search/?api=1&query=Lower%20Deschutes%20River"
+        },
+        {
+          "time": "After fishing",
+          "end": "",
+          "title": "Return to Bend",
+          "type": "drive",
+          "details": "Return to Pine Ridge Inn for the night.",
+          "location": "Pine Ridge Inn, Bend",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Madras%2C%20Oregon&destination=Pine%20Ridge%20Inn%2C%20Bend"
+        }
       ]
     },
     {
-      day: 9, date: "Monday, August 24", title: "Crater Lake",
-      subtitle: "A day of overlooks, rim walks & optional Diamond Lake calm",
-      route: "Bend ↔ Crater Lake · 142 miles · 2.5 hours each way",
-      events: [
-        {time:"7:00 AM", type:"drive", title:"Leave Bend", summary:"142 miles · about 2.5 hours to Crater Lake.", details:["Bring a light jacket, sunglasses, sunscreen, picnic lunch, snacks and drinks"], map:"Crater Lake National Park"},
-        {time:"Morning", type:"view", title:"Rim Village first look", summary:"Walk the rim paths and take time with the lake’s first big view.", details:["The lake itself is the main attraction; do not overcomplicate the day"], map:"Rim Village, Crater Lake National Park"},
-        {time:"Late morning", type:"hike", title:"Watchman Overlook", summary:"Classic angle over Wizard Island and the caldera.", details:["Watchman Peak Trail: about 1.7 miles, 400 feet climbing","Source describes the viewpoint walk as the day’s best view"], map:"Watchman Overlook, Crater Lake"},
-        {time:"Midday", type:"view", title:"Rim Drive pullouts & optional hike", summary:"Choose a few viewpoints rather than rushing every stop.", details:["Full Rim Drive: 33 miles · about 1 hr 15 min without stops","East-side viewpoints highlighted: Cloudcap, Phantom Ship, Kerr Notch and Sun Notch","Discovery Point Trail: 2.2 miles, 318 feet","Rim + Discovery Point: 4.5 miles, 856 feet","Cleetwood Cove is strenuous and likely best skipped","Allow about 3–4 hours inside the park"], map:"Crater Lake Rim Drive"},
-        {time:"By about 3:00 PM", type:"drive", title:"Begin return to Bend", summary:"Leave around 3:00 PM to target dinner near 6:00 PM.", details:["Optional Diamond Lake: 46 miles · 58 minutes north of Crater Lake","Diamond Lake to Pine Ridge Inn: 95 miles · 1 hr 40 min"], map:"Diamond Lake, Oregon"},
-        {time:"Optional stop", type:"walk", title:"Diamond Lake", summary:"A peaceful shoreline pause with Mount Thielsen views.", details:["20–30 minute easy shoreline walk","Possible picnic, coffee or casual food","Skip if tired or weather is poor"]},
-        {time:"Evening", type:"hotel", title:"Final Bend evening", summary:"Third night at Pine Ridge Inn.", details:["Relaxed final dinner in Bend"], map:"Pine Ridge Inn, Bend, OR"}
+      "day": 9,
+      "date": "Monday, August 24, 2026",
+      "title": "Crater Lake",
+      "subtitle": "Bend → Crater Lake National Park → Bend",
+      "dontForget": [
+        "Jacket or sweater",
+        "Use the North Entrance and West Rim Drive",
+        "Target departure from the park: 1:15 PM"
+      ],
+      "storyTitle": "Documented 2026 plan",
+      "story": "A viewpoint-oriented western-rim visit. The document says East Rim Drive is closed from Park Headquarters to Phantom Ship Overlook, and Cleetwood Cove Trail and Sun Notch access are closed.",
+      "events": [
+        {
+          "time": "7:00 AM",
+          "end": "",
+          "title": "Breakfast at hotel",
+          "type": "meal",
+          "details": "Take a jacket or sweater; elevations are listed as 6,000–8,000 ft.",
+          "location": "Pine Ridge Inn, Bend",
+          "map": "https://www.google.com/maps/search/?api=1&query=Pine%20Ridge%20Inn%2C%20Bend"
+        },
+        {
+          "time": "8:00 AM",
+          "end": "",
+          "title": "Leave Bend for Crater Lake",
+          "type": "drive",
+          "details": "US-97 South to OR-138 West and the North Entrance; approximately 105 miles / 2 hr 10 min.",
+          "location": "Crater Lake North Entrance",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Pine%20Ridge%20Inn%2C%20Bend&destination=Crater%20Lake%20North%20Entrance"
+        },
+        {
+          "time": "10:00–10:15 AM",
+          "end": "",
+          "title": "Enter via North Entrance",
+          "type": "activity",
+          "details": "Continue to North Junction.",
+          "location": "Crater Lake North Entrance",
+          "map": "https://www.google.com/maps/search/?api=1&query=Crater%20Lake%20North%20Entrance"
+        },
+        {
+          "time": "10:15–10:30 AM",
+          "end": "",
+          "title": "North Junction",
+          "type": "activity",
+          "details": "First lake view.",
+          "location": "North Junction, Crater Lake",
+          "map": "https://www.google.com/maps/search/?api=1&query=North%20Junction%2C%20Crater%20Lake"
+        },
+        {
+          "time": "10:30–10:50 AM",
+          "end": "",
+          "title": "West Rim Drive",
+          "type": "drive",
+          "details": "Stop briefly at a good pullout.",
+          "location": "West Rim Drive, Crater Lake",
+          "map": "https://www.google.com/maps/search/?api=1&query=West%20Rim%20Drive%2C%20Crater%20Lake"
+        },
+        {
+          "time": "10:50–11:15 AM",
+          "end": "",
+          "title": "Watchman Overlook",
+          "type": "activity",
+          "details": "Wizard Island views; do not hike the Watchman Peak Trail.",
+          "location": "Watchman Overlook, Crater Lake",
+          "map": "https://www.google.com/maps/search/?api=1&query=Watchman%20Overlook%2C%20Crater%20Lake"
+        },
+        {
+          "time": "11:15–11:25 AM",
+          "end": "",
+          "title": "Drive to Rim Village",
+          "type": "drive",
+          "details": "Walk part of the rim toward Discovery Point without committing to the full hike.",
+          "location": "Rim Village, Crater Lake",
+          "map": "https://www.google.com/maps/search/?api=1&query=Rim%20Village%2C%20Crater%20Lake"
+        },
+        {
+          "time": "11:25 AM–12:05 PM",
+          "end": "",
+          "title": "Rim Village & Sinnott Memorial Overlook",
+          "type": "activity",
+          "details": "Walk the promenade, take photographs, and enjoy the lake.",
+          "location": "Sinnott Memorial Overlook",
+          "map": "https://www.google.com/maps/search/?api=1&query=Sinnott%20Memorial%20Overlook"
+        },
+        {
+          "time": "12:05–12:35 PM",
+          "end": "",
+          "title": "Lunch at Rim Village Café",
+          "type": "meal",
+          "details": "Early picnic/snack lunch.",
+          "location": "Rim Village Café",
+          "map": "https://www.google.com/maps/search/?api=1&query=Rim%20Village%20Caf%C3%A9"
+        },
+        {
+          "time": "12:35–1:10 PM",
+          "end": "",
+          "title": "Return north and final overlook",
+          "type": "activity",
+          "details": "Use Discovery Point area or another overlook for final views.",
+          "location": "Discovery Point, Crater Lake",
+          "map": "https://www.google.com/maps/search/?api=1&query=Discovery%20Point%2C%20Crater%20Lake"
+        },
+        {
+          "time": "1:15 PM",
+          "end": "",
+          "title": "Leave Crater Lake",
+          "type": "drive",
+          "details": "Target departure time to protect the return schedule.",
+          "location": "Pine Ridge Inn, Bend",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Crater%20Lake%20National%20Park&destination=Pine%20Ridge%20Inn%2C%20Bend"
+        },
+        {
+          "time": "3:25–3:40 PM",
+          "end": "",
+          "title": "Return to Pine Ridge Inn",
+          "type": "lodging",
+          "details": "Rest, pack, and have dinner.",
+          "location": "Pine Ridge Inn, Bend",
+          "map": "https://www.google.com/maps/search/?api=1&query=Pine%20Ridge%20Inn%2C%20Bend"
+        }
       ]
     },
     {
-      day: 10, date: "Tuesday, August 25", title: "Bend to Portland & Home",
-      subtitle: "Return the car and fly to SDF",
-      route: "161 miles · 3 hr 15 min",
-      events: [
-        {time:"About 8:45 AM", type:"drive", title:"Leave Bend for Portland", summary:"161 miles · 3 hr 15 min; target airport arrival around noon.", details:["Allow time for fuel, traffic and rental-car return"], map:"Portland International Airport"},
-        {time:"Before departure", type:"car", title:"Return Avis rental car", summary:"Return the prepaid premium crossover.", details:["Avis confirmation: 20404814US3"], map:"Avis Car Rental, Portland International Airport"},
-        {time:"1:33 PM", type:"flight", title:"Fly Portland to SDF", summary:"Delta DL 1071, connecting to DL 5070.", details:["Scheduled arrival at SDF: 11:56 PM"], map:"Portland International Airport"}
+      "day": 10,
+      "date": "Tuesday, August 25, 2026",
+      "title": "Bend to Portland & Flight Home",
+      "subtitle": "Bend → Portland International Airport → Louisville",
+      "dontForget": [
+        "Flight details",
+        "Rental-car return",
+        "Leave Bend around 8:00 AM"
+      ],
+      "storyTitle": "Documented plan",
+      "story": "Drive to Portland International Airport, return the rental car, and fly home. The detailed Day 10 document establishes August 25; its filename says August 15.",
+      "events": [
+        {
+          "time": "7:00 AM",
+          "end": "",
+          "title": "Breakfast",
+          "type": "meal",
+          "details": "Finish packing before departure.",
+          "location": "Pine Ridge Inn, Bend",
+          "map": "https://www.google.com/maps/search/?api=1&query=Pine%20Ridge%20Inn%2C%20Bend"
+        },
+        {
+          "time": "8:00 AM",
+          "end": "",
+          "title": "Depart for Portland",
+          "type": "drive",
+          "details": "161 miles / approximately 3 hr 15 min via US-97, US-26, I-84, and I-205.",
+          "location": "Portland International Airport",
+          "map": "https://www.google.com/maps/dir/?api=1&origin=Pine%20Ridge%20Inn%2C%20Bend&destination=Portland%20International%20Airport"
+        },
+        {
+          "time": "11:30 AM",
+          "end": "",
+          "title": "Arrive at rental-car counter",
+          "type": "drive",
+          "details": "Documented target is two hours before departure.",
+          "location": "Portland International Airport Rental Car Center",
+          "map": "https://www.google.com/maps/search/?api=1&query=Portland%20International%20Airport%20Rental%20Car%20Center"
+        },
+        {
+          "time": "12:00 PM",
+          "end": "",
+          "title": "Check bags and go to gate",
+          "type": "flight",
+          "details": "Allow time for airport processing.",
+          "location": "Portland International Airport",
+          "map": "https://www.google.com/maps/search/?api=1&query=Portland%20International%20Airport"
+        },
+        {
+          "time": "1:00 PM?",
+          "end": "",
+          "title": "Boarding",
+          "type": "flight",
+          "details": "The boarding time is marked with a question mark in the source document.",
+          "location": "Portland International Airport",
+          "map": "https://www.google.com/maps/search/?api=1&query=Portland%20International%20Airport"
+        },
+        {
+          "time": "1:33 PM",
+          "end": "",
+          "title": "Delta DL 1071 departs",
+          "type": "flight",
+          "details": "Departure time listed in the Day 10 and master documents.",
+          "location": "Portland International Airport",
+          "map": "https://www.google.com/maps/search/?api=1&query=Portland%20International%20Airport"
+        },
+        {
+          "time": "11:56 PM",
+          "end": "",
+          "title": "Delta DL 5070 arrives Louisville",
+          "type": "flight",
+          "details": "Arrival time listed in the Day 10 and master documents.",
+          "location": "Louisville Muhammad Ali International Airport",
+          "map": "https://www.google.com/maps/search/?api=1&query=Louisville%20Muhammad%20Ali%20International%20Airport"
+        }
       ]
     }
   ],
-  tripInfo: [
-    {label:"Outbound flights", title:"Delta DL 1610 · DL 774", body:"Depart SDF at 7:05 AM on Sunday, August 16; arrive Seattle at 12:08 PM."},
-    {label:"Return flights", title:"Delta DL 1071 · DL 5070", body:"Depart Portland at 1:33 PM on Tuesday, August 25; arrive SDF at 11:56 PM."},
-    {label:"Rental car", title:"Avis premium crossover · prepaid", body:"Confirmation 20404814US3. Pick up in Seattle and return in Portland."},
-    {label:"Road conditions", title:"Check before mountain and Gorge days", body:"Use TripCheck.com for Oregon roads, Washington DOT and official park/forest alerts."},
-    {label:"Offline guide", title:"Load GuideAlong on iPhone", body:"Download relevant tours before leaving reliable service."},
-    {label:"Passes", title:"National Park Pass", body:"Carry the physical National Park Pass and Kim’s AAA card."}
+  "tickets": [
+    {
+      "name": "Outbound flights",
+      "value": "August 16: DL 1610 and DL 774; depart SDF 7:05 AM and arrive Seattle 12:08 PM."
+    },
+    {
+      "name": "Return flights",
+      "value": "August 25: DL 1071 departs Portland 1:33 PM; DL 5070 arrives SDF 11:56 PM."
+    },
+    {
+      "name": "Avis rental car",
+      "value": "Premium Crossover, prepaid. Confirmation: 20404814US3."
+    },
+    {
+      "name": "Wayfarer dinner reservation",
+      "value": "August 20 at 8:00 PM; 1190 Pacific Dr, Cannon Beach; 503-436-1108."
+    },
+    {
+      "name": "Kokopelli Grill reservation",
+      "value": "Reservation noted as being on Toast.app; 203 E Front St, Port Angeles; 360-457-6040."
+    },
+    {
+      "name": "Fly-fishing guide",
+      "value": "Steve Erickson, The Fly Fisher’s Place; 541-549-3474. Meeting time and float details remain to be confirmed."
+    },
+    {
+      "name": "Oregon fishing license",
+      "value": "Required before the August 23 fishing trip."
+    }
   ],
-  checklist: {
-    "Before the trip": ["Download GuideAlong tours","Save this site to the iPhone Home Screen","Download offline maps","Check all flight times","Confirm Avis pickup and return","Confirm all hotel reservations"],
-    "Carry every day": ["National Park Pass card","Kim’s AAA card","Water bottles","Snacks","Light jacket / rain layer","Sunglasses and sunscreen","Camera / charged phone","Hiking poles if desired"],
-    "Fishing day": ["Confirm meeting time with Steve Erickson","Confirm whether flies, tippet and leaders are included","Pack lunch","Fishing license / required permits","Appropriate footwear and layers"],
-    "Night-before checks": ["Day 3: Rainier and Mount St. Helens road/park alerts","Day 4: TripCheck for Historic Columbia River Highway","Day 6: Cape Perpetua high-tide time","Day 9: Crater Lake roads and weather","Day 10: Portland traffic and flight status"]
-  }
+  "checklist": [
+    "National Park Pass",
+    "Driver’s licenses and Avis confirmation 20404814US3",
+    "Flight details and boarding passes",
+    "Hotel confirmations",
+    "Wayfarer and Kokopelli reservations",
+    "Oregon fishing license",
+    "Confirm fishing meeting time, float, wading staff, water temperature, and drinks",
+    "Fishing lunch and reusable water bottle",
+    "Rain jacket and light layers",
+    "Warm jacket or sweater for Hurricane Ridge and Crater Lake",
+    "Sturdy walking shoes",
+    "Water, electrolyte drinks, and snacks",
+    "Phone/camera chargers",
+    "Check park and road conditions",
+    "Check tide and ocean conditions",
+    "Fill the rental car before Day 3",
+    "Buy fishing-day supplies Saturday evening"
+  ]
 };
