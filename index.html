@@ -2,64 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#173f3a">
-  <meta name="description" content="Pacific Northwest road trip itinerary, August 16–25, 2026">
-  <title>Pacific Northwest · 2026</title>
-  <link rel="icon" type="image/png" href="apple-touch-icon.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#5b9894">
+  <title>Pacific Northwest Itinerary</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .brand-row{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-align:left}
+    .brand-icon{display:block;width:48px;height:48px;border-radius:11px;flex:0 0 48px;box-shadow:0 1px 4px rgba(0,0,0,.16)}
+    .brand-copy h1{margin:0}
+    .brand-copy p{margin:4px 0 0}
+    @media(max-width:560px){.brand-row{gap:10px}.brand-icon{width:42px;height:42px;flex-basis:42px}}
+  </style>
 </head>
 <body>
-  <header class="hero">
- <img
-  src="apple-touch-icon.png"
-  alt="Pacific Northwest trip icon"
-  style="width:72px;height:72px;border-radius:18px;margin-bottom:14px;box-shadow:0 8px 20px rgba(0,0,0,.22);"
->
-<div class="hero__eyebrow">August 16–25, 2026</div>
-<h1>Pacific Northwest</h1>
-    <p>Olympic · Rainier · Columbia Gorge · Oregon Coast · Bend</p>
-    <div class="hero__summary">
-      <span><strong>10</strong> days</span>
-      <span><strong>3</strong> national parks</span>
-      <span><strong>1</strong> fishing day</span>
+<header class="topbar">
+  <div class="brand brand-row">
+    <img class="brand-icon" src="icon.svg" alt="Pacific Northwest itinerary icon" width="48" height="48">
+    <div class="brand-copy">
+      <h1 id="tripTitle">Pacific Northwest 2026</h1>
+      <p id="tripDates">August 16–25, 2026</p>
     </div>
-  </header>
+  </div>
+</header>
 
-  <nav class="day-strip" id="dayStrip" aria-label="Choose a day"></nav>
+<main>
+  <section class="day-switcher">
+    <button id="prevBtn" aria-label="Previous day">‹</button>
+    <div><span id="dayCounter"></span><strong id="daySelectorTitle"></strong></div>
+    <button id="nextBtn" aria-label="Next day">›</button>
+  </section>
+  <div class="progress"><span id="progressBar"></span></div>
 
-  <main id="mainContent">
-    <section id="dayView" class="view"></section>
-    <section id="mapView" class="view" hidden></section>
-    <section id="tripView" class="view" hidden></section>
-    <section id="searchView" class="view" hidden></section>
-    <section id="checklistView" class="view" hidden></section>
-  </main>
+  <section id="dayView" class="view active">
+    <div class="eyebrow" id="eyebrow"></div>
+    <h2 id="dayTitle"></h2>
+    <p class="subtitle" id="daySubtitle"></p>
+    <div class="notice"><div class="notice-title">DON'T FORGET</div><ul id="dontForget"></ul></div>
+    <div class="section-heading"><span>LOGISTICS</span></div>
+    <div id="timeline" class="timeline"></div>
+    <details class="story" open>
+      <summary>Background &amp; story</summary>
+      <h3 id="storyTitle"></h3><p id="storyText"></p>
+    </details>
+  </section>
 
-  <nav class="bottom-nav" aria-label="Primary">
-    <button data-view="dayView" class="active"><span>◷</span>Day</button>
-    <button data-view="mapView"><span>⌖</span>Map</button>
-    <button data-view="tripView"><span>✦</span>Trip</button>
-    <button data-view="searchView"><span>⌕</span>Search</button>
-    <button data-view="checklistView"><span>✓</span>Checklist</button>
-  </nav>
+  <section id="mapView" class="view">
+    <h2>Trip map</h2><p class="subtitle">Open each destination in Google Maps.</p>
+    <div id="mapList" class="card-list"></div>
+  </section>
 
-  <template id="eventTemplate">
-    <article class="event">
-      <div class="event__rail"><span class="event__icon"></span></div>
-      <div class="event__body">
-        <div class="event__topline"><time></time><span class="event__tag"></span></div>
-        <h3></h3>
-        <p class="event__summary"></p>
-        <ul class="event__details"></ul>
-        <div class="event__actions"></div>
-      </div>
-    </article>
-  </template>
+  <section id="wikiView" class="view">
+    <h2>Trip notes</h2>
+    <div class="story" style="margin-top:1rem">
+      <h3>How to use this site</h3>
+      <p>Use the arrows to move day by day. Tap any map link to open navigation. The Tickets and Checklist tabs are stored in this browser, so edits and checked items remain on this device.</p>
+      <h3>Important</h3>
+      <p>Park access, permits, wildfire closures, tides, trail conditions, road construction, and operating hours can change. Verify each day shortly before departure.</p>
+      <h3>Editing the itinerary</h3>
+      <p>Open <code>data.js</code> in GitHub, click the pencil icon, change text or links, and commit the edit. GitHub Pages usually updates within a few minutes.</p>
+    </div>
+  </section>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <section id="ticketsView" class="view">
+    <h2>Tickets &amp; confirmations</h2>
+    <p class="subtitle">Tap a field to add your private confirmation details. They remain only in this browser.</p>
+    <div id="ticketList" class="card-list"></div>
+  </section>
+
+  <section id="searchView" class="view">
+    <h2>Search itinerary</h2>
+    <input id="searchInput" class="search-input" type="search" placeholder="Search Rainier, fishing, hotel…">
+    <div id="searchResults" class="card-list"></div>
+  </section>
+
+  <section id="checklistView" class="view">
+    <h2>Trip checklist</h2>
+    <div id="checklist" class="checklist"></div>
+    <button id="resetChecklist" class="secondary">Reset checklist</button>
+  </section>
+</main>
+
+<nav class="bottom-nav" aria-label="Primary">
+  <button data-view="dayView" class="active"><span>📅</span>DAY</button>
+  <button data-view="mapView"><span>🗺️</span>MAP</button>
+  <button data-view="wikiView"><span>📖</span>WIKI</button>
+  <button data-view="ticketsView"><span>🎫</span>TICKETS</button>
+  <button data-view="searchView"><span>⌕</span>SEARCH</button>
+  <button data-view="checklistView"><span>✓</span>CHECKLIST</button>
+</nav>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
