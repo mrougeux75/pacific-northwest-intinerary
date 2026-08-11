@@ -5,5 +5,12 @@
   "display": "standalone",
   "background_color": "#f5f1e8",
   "theme_color": "#173f3a",
-  "description": "A 10-day Pacific Northwest road trip itinerary."
+  "description": "A 10-day Pacific Northwest road trip itinerary.",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
 }

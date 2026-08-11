@@ -1,4 +1,4 @@
-const CACHE = "pnw-itinerary-v2";
+const CACHE = "pnw-itinerary-v3";
 
 const ASSETS = [
   "./",
@@ -6,7 +6,8 @@ const ASSETS = [
   "./styles.css",
   "./data.js",
   "./app.js",
-  "./manifest.webmanifest"
+  "./manifest.webmanifest",
+  "./apple-touch-icon.png"
 ];
 
 self.addEventListener("install", event => {

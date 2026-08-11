@@ -39,8 +39,21 @@ a { color: var(--ocean); }
   letter-spacing: .17em;
   text-transform: uppercase;
 }
-.hero h1 {
+.hero__title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin: 8px 0 1px;
+}
+.hero__icon {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0,0,0,.2);
+}
+.hero h1 {
+  margin: 0;
   max-width: 620px;
   font-family: ui-serif, Georgia, serif;
   font-size: clamp(2.35rem, 9vw, 4.5rem);
@@ -55,6 +68,11 @@ a { color: var(--ocean); }
   border-radius: 999px;
   background: rgba(255,255,255,.08);
   font-size: .78rem;
+}
+
+@media (max-width: 520px) {
+  .hero__title-row { gap: 12px; }
+  .hero__icon { width: 58px; height: 58px; flex-basis: 58px; border-radius: 13px; }
 }
 
 .day-strip {
